@@ -1,0 +1,27 @@
+{
+	"$schema": "https://raw.githubusercontent.com/untrustedmodders/plugify/refs/heads/main/schemas/plugin.schema.json",
+	"version": "${AS_ADMIN_TIME_VERSION}",
+	"name": "as_admin_time",
+	"description": "Records how long every admin is online in the shared admin database (table `as_admin_time`, kept byte-compatible with the Metamod module so both server flavours can share the rows): connect/disconnect timestamps, played time, per-server id, plus crash recovery ('reset') and optional spectator-time exclusion ('spec_time'). Ported from the Pisex admin_system module 'AdminTime' ([AS] Admin Time by Pisex). Uses the database settings exported by the admin_system core. Requires the admin_system core.",
+	"author": "Pisex, ported to Plugify",
+	"website": "https://github.com/untrustedmodders/plugify",
+	"license": "GPL-3.0",
+	"entry": "bin/as_admin_time",
+	"platforms": [],
+	"language": "cpp",
+	"dependencies": [
+		{
+			"name": "s2sdk",
+			"constraints": ">=2.18.2"
+		},
+		{
+			"name": "admin_system",
+			"constraints": ">=1.0.0"
+		},
+		{
+			"name": "hudmenu",
+			"constraints": ">=1.0.0",
+			"optional": true
+		}
+	]
+}
